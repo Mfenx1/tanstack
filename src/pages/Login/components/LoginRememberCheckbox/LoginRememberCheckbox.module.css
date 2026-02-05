@@ -1,0 +1,44 @@
+.checkboxWrap {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.checkbox {
+  width: 1rem;
+  height: 1rem;
+  margin: 0;
+  appearance: none;
+  -webkit-appearance: none;
+  border: 2px solid var(--login-muted);
+  border-radius: 0.25rem;
+  background: #fff;
+  cursor: pointer;
+  flex-shrink: 0;
+  display: grid;
+  place-content: center;
+}
+
+.checkbox:checked {
+  background: var(--login-muted);
+}
+
+.checkbox:checked::before {
+  content: '';
+  width: 0.35rem;
+  height: 0.6rem;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.checkbox:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.checkboxLabel {
+  font-size: 0.875rem;
+  color: var(--login-muted);
+  cursor: pointer;
+}

@@ -1,0 +1,73 @@
+.submitWrap {
+  position: relative;
+}
+
+.submit {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  background: var(--color-primary);
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.submit:hover:not(:disabled) {
+  background: var(--color-primary-hover);
+}
+
+.submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.tooltipPopover {
+  position: absolute;
+  bottom: calc(100% + 0.375rem);
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  padding: 0.375rem 0.5rem;
+  font-size: 0.75rem;
+  color: #fff;
+  background: var(--color-error);
+  border-radius: 0.25rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tooltipPopover::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0.75rem;
+  border: 5px solid transparent;
+  border-top-color: var(--color-error);
+}
+
+.separator {
+  text-align: center;
+  font-size: 0.875rem;
+  color: var(--login-muted);
+  margin: 0.25rem 0;
+}
+
+.register {
+  text-align: center;
+  font-size: 0.875rem;
+  color: var(--login-muted);
+}
+
+.registerLink {
+  color: var(--color-primary);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.registerLink:hover {
+  color: var(--color-primary-hover);
+}

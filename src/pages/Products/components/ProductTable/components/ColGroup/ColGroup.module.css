@@ -1,0 +1,8 @@
+.colResizable {
+  width: var(--col-width);
+  min-width: var(--col-min-width);
+}
+
+.colActions {
+  width: 80px;
+}

@@ -1,0 +1,108 @@
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+}
+
+.label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+.inputWrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.inputWrap.hasRightBtn .inputWithIcon {
+  padding-right: 2.5rem;
+}
+
+.inputWithIcon {
+  flex: 1;
+  min-width: 0;
+  padding: 0.625rem 1rem 0.625rem 2.75rem;
+  font-size: 1rem;
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: 0.5rem;
+  color: var(--color-text);
+  outline: none;
+}
+
+.inputWithIcon:focus {
+  border-color: var(--color-primary);
+}
+
+.inputWithIcon::placeholder {
+  color: var(--color-text-muted);
+}
+
+.inputIcon {
+  position: absolute;
+  left: 0.875rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1.25rem;
+  height: 1.25rem;
+  pointer-events: none;
+}
+
+.inputIcon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.clearBtn {
+  position: absolute;
+  right: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--login-muted);
+  padding: 0.25rem;
+}
+
+.clearBtn svg {
+  width: 1.125rem;
+  height: 1.125rem;
+}
+
+.clearBtn:hover {
+  color: var(--color-text);
+}
+
+.tooltipPopover {
+  position: absolute;
+  top: calc(100% + 0.375rem);
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  padding: 0.375rem 0.5rem;
+  font-size: 0.75rem;
+  color: #fff;
+  background: var(--color-error);
+  border-radius: 0.25rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tooltipPopover::before {
+  content: '';
+  position: absolute;
+  bottom: 100%;
+  left: 0.75rem;
+  border: 5px solid transparent;
+  border-bottom-color: var(--color-error);
+}

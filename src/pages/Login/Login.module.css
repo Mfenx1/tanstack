@@ -1,0 +1,18 @@
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  background: var(--color-bg-secondary);
+}
+
+.card {
+  --login-muted: #a6aab3;
+  width: 100%;
+  max-width: 28rem;
+  padding: 2.5rem;
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+}

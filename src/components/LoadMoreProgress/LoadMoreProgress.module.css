@@ -1,0 +1,16 @@
+.loadMoreProgress {
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--color-border);
+  overflow: hidden;
+  z-index: 2;
+}
+
+.loadMoreProgressBar {
+  height: 100%;
+  width: 40%;
+  background: var(--color-primary);
+}

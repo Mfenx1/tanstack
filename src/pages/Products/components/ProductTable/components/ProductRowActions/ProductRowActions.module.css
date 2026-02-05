@@ -1,0 +1,32 @@
+.actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.btnSave,
+.btnCancel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.25rem;
+  border: none;
+  cursor: pointer;
+}
+
+.btnSave {
+  background: #22c55e;
+  color: #fff;
+}
+
+.btnSave:hover {
+  background: #16a34a;
+}
+
+.btnCancel {
+  background: var(--color-text-muted);
+  color: #fff;
+}
+
+.btnCancel:hover {
+  background: var(--color-text);
+}

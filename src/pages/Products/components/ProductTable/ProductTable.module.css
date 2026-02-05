@@ -1,0 +1,163 @@
+.tableOuter {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  height: 100%;
+  min-height: 300px;
+  max-height: calc(100vh - 180px);
+}
+
+.tableOuter.resizing {
+  cursor: col-resize;
+}
+
+.headerWrap {
+  flex-shrink: 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.bodyWrap {
+  flex: 1;
+  min-height: 0;
+  overflow: auto;
+}
+
+.bodyWrap::-webkit-scrollbar {
+  width: 8px;
+}
+
+.bodyWrap::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+.bodyWrap::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+}
+
+.bodyWrap::-webkit-scrollbar-thumb:hover {
+  background: var(--color-text-muted);
+}
+
+.table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  table-layout: fixed;
+  --row-height: 48px;
+}
+
+.virtualListInner {
+  width: 100%;
+  position: relative;
+  height: var(--virtual-height);
+}
+
+.bodyWrap tbody tr:last-child td {
+  border-bottom-width: 1px;
+}
+
+.colResizable,
+.thResizable {
+  width: var(--col-width);
+  min-width: var(--col-min-width);
+}
+
+.colActions,
+.thActions {
+  width: 80px;
+}
+
+.th {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  vertical-align: middle;
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: #9ca3af;
+  background: #fff;
+  border-bottom: 1px solid var(--color-border);
+  position: relative;
+}
+
+.th:not(:first-child) {
+  text-align: center;
+}
+
+.th:not(:first-child) .sortBtn,
+.th:not(:first-child) .thLabel {
+  display: inline-flex;
+  justify-content: center;
+}
+
+.thLabel {
+  color: inherit;
+  font: inherit;
+}
+
+.headerWrap .th {
+  border-bottom: none;
+}
+
+.sortBtn {
+  background: none;
+  border: none;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  vertical-align: middle;
+}
+
+.sortBtn:hover {
+  color: var(--color-text);
+}
+
+.sortIcon {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.75rem;
+  color: var(--color-primary);
+}
+
+.resizeHandle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 8px;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  border: none;
+  border-right: 1px solid transparent;
+  background: transparent;
+  font: inherit;
+  cursor: col-resize;
+}
+
+.resizeHandle:hover,
+.resizeHandle:active {
+  background: rgba(66, 99, 235, 0.15);
+  border-right-color: var(--color-primary);
+}
+
+.resizeHandle::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 2px;
+  height: 16px;
+  background: var(--color-border);
+  border-radius: 1px;
+  opacity: 0;
+}
+
+.resizeHandle:hover::after,
+.resizeHandle:active::after {
+  opacity: 1;
+  background: var(--color-primary);
+}
